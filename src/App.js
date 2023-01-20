@@ -1,12 +1,19 @@
 import './App.css';
 import React from 'react';
-import BookForm from './components/BookForm';
+import { Route } from 'react-router-dom';
+import BookCategories from './components/BookCategories';
+import Book from './components/Book';
 
 function App() {
   return (
-    <div className="App">
-      <BookForm />
-    </div>
+    <>
+      <Route exact path="/bookcategories">
+        <BookCategories />
+      </Route>
+      <Route exact path="/">
+        <Book />
+      </Route>
+    </>
   );
 }
 

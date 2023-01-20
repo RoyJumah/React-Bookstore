@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Books from './Books';
+import BookForm from './BookForm';
 
 class Book extends Component {
   constructor(props) {
@@ -22,7 +23,12 @@ class Book extends Component {
 
   render() {
     const { books } = this.state;
-    return <Books books={books} />;
+    return (
+      <div>
+        <Books books={books} />
+        <BookForm />
+      </div>
+    );
   }
 }
 
