@@ -1,5 +1,11 @@
-// import React from 'react';
+import React from "react";
 
-// const BookCategories = (props) => {};
+const BookCategories = () => {
+  return (
+    <div>
+      <button>Check Status</button>
+    </div>
+  );
+};
 
-// export default BookCategories;
+export default BookCategories;
