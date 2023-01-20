@@ -1,5 +1,28 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Books.css';
 
-// const Books = (props) => {};
+const Books = ({ books }) => (
+  <ul>
+    {books.map((book) => (
+      <li key={book.id}>
+        {book.title}
+        {' '}
+        -
+        {book.author}
+      </li>
+    ))}
+  </ul>
+);
 
-// export default Books;
+Books.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
+export default Books;

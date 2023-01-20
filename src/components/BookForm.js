@@ -1,34 +1,25 @@
-import React, { useState } from "react";
-import "./BookForm.css";
+import React, { useState } from 'react';
+import './BookForm.css';
 
-const BookForm = (props) => {
+const BookForm = () => {
   const [enteredTitle, setEnteredTitle] = useState({
-    bookTitle: "",
+    bookTitle: '',
   });
 
   const [enteredAuthor, setEnteredAuthor] = useState({
-    bookAuthor: "",
+    bookAuthor: '',
   });
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
+    setEnteredTitle({ bookTitle: event.target.value });
   };
 
   const authorChangeHandler = (event) => {
-    setEnteredAuthor(event.target.value);
+    setEnteredAuthor({ bookAuthor: event.target.value });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-
-    const bookData = {
-      bookTitle: enteredTitle,
-      bookAuthor: enteredAuthor,
-    };
-
-    props.onSaveBookData(bookData);
-    setEnteredTitle("");
-    setEnteredAuthor("");
   };
 
   return (
@@ -40,7 +31,7 @@ const BookForm = (props) => {
             <input
               type="text"
               placeholder="Book Title"
-              value={enteredTitle}
+              value={enteredTitle.bookTitle}
               onChange={titleChangeHandler}
             />
           </div>
@@ -48,7 +39,7 @@ const BookForm = (props) => {
             <input
               type="text"
               placeholder="Author"
-              value={enteredAuthor}
+              value={enteredAuthor.bookAuthor}
               onChange={authorChangeHandler}
             />
           </div>

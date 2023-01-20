@@ -1,16 +1,29 @@
-import React from "react";
+import React, { Component } from 'react';
+import Books from './Books';
 
-import Card from "./UI/Card";
-import BookForm from "./BookForm";
-const Book = (props) => {
-  return (
-    <>
-      <Card className="expense-item">
-        <BookForm title={props.title} />
-        <BookForm author={props.author} />
-      </Card>
-    </>
-  );
-};
+class Book extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: [
+        {
+          id: 1,
+          title: 'When The Sun Goes Down',
+          author: 'Gwynne Forster',
+        },
+        {
+          id: 2,
+          title: 'To Kill A Mocking Bird',
+          author: 'Harper Lee',
+        },
+      ],
+    };
+  }
+
+  render() {
+    const { books } = this.state;
+    return <Books books={books} />;
+  }
+}
 
 export default Book;
