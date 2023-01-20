@@ -10,6 +10,9 @@ const Books = ({ books }) => (
         {' '}
         -
         {book.author}
+        <button className="remove__button" type="button">
+          Remove
+        </button>
       </li>
     ))}
   </ul>

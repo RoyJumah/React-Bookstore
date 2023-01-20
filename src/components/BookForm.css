@@ -28,3 +28,7 @@
 *:focus {
   outline: none;
 }
+
+h2 {
+  text-align: center;
+}
