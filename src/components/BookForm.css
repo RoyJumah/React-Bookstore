@@ -1,6 +1,5 @@
 .new-expense__controls {
   display: flex;
-
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -11,7 +10,6 @@
 .new-expense__control input {
   font: inherit;
   padding: 0.5rem;
-
   width: 20rem;
   max-width: 100%;
 }

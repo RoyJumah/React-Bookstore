@@ -1,21 +1,32 @@
 import './App.css';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route } from 'react-router-dom';
-import BookCategories from './components/BookCategories';
-import Book from './components/Book';
+import LoadingSpinner from './components/UI/LoadingSpinner';
+
 import MainHeader from './components/MainHeader';
+
+const BookCategories = React.lazy(() => import('./components/BookCategories'));
+const Book = React.lazy(() => import('./components/Book'));
 
 function App() {
   return (
     <>
       <MainHeader />
       <main>
-        <Route exact path="/bookcategories">
-          <BookCategories />
-        </Route>
-        <Route exact path="/">
-          <Book />
-        </Route>
+        <Suspense
+          fallback={(
+            <div className="centered">
+              <LoadingSpinner />
+            </div>
+          )}
+        >
+          <Route exact path="/bookcategories">
+            <BookCategories />
+          </Route>
+          <Route exact path="/">
+            <Book />
+          </Route>
+        </Suspense>
       </main>
     </>
   );
