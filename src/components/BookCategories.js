@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const BookCategories = () => {
-  return (
-    <div>
-      <button>Check Status</button>
-    </div>
-  );
-};
+const BookCategories = () => (
+  <div>
+    <button type="button">Check Status</button>
+  </div>
+);
 
 export default BookCategories;

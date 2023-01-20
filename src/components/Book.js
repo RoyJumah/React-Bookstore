@@ -1,8 +1,16 @@
-// import React, { useState, Fragment } from 'react';
+import React from "react";
 
-// const Book = (props) => {
-//   console.log(useState('hello'));
-//   return <div />;
-// };
+import Card from "./UI/Card";
+import BookForm from "./BookForm";
+const Book = (props) => {
+  return (
+    <>
+      <Card className="expense-item">
+        <BookForm title={props.title} />
+        <BookForm author={props.author} />
+      </Card>
+    </>
+  );
+};
 
-// export default Book;
+export default Book;

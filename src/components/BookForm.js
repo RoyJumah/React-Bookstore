@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import './BookForm.css';
+import React, { Fragment } from "react";
+import "./BookForm.css";
 
 const BookForm = () => (
   <>
-    <h2>ADD NEW BOOK</h2>
     <form>
+      <h2>ADD NEW BOOK</h2>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <input type="text" placeholder="Book Title" />
