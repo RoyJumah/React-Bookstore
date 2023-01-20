@@ -1,5 +1,5 @@
-import React from "react";
+// import React from 'react';
 
-const BookCategories = (props) => {};
+// const BookCategories = (props) => {};
 
-export default BookCategories;
+// export default BookCategories;
