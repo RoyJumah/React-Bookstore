@@ -1,28 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Suspense } from 'react';
+import { Route } from 'react-router-dom';
+import LoadingSpinner from './components/UI/LoadingSpinner';
+
+import MainHeader from './components/MainHeader';
+
+const BookCategories = React.lazy(() => import('./components/BookCategories'));
+const Book = React.lazy(() => import('./components/Book'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <MainHeader />
+      <main>
+        <Suspense
+          fallback={(
+            <div className="centered">
+              <LoadingSpinner />
+            </div>
+          )}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route exact path="/bookcategories">
+            <BookCategories />
+          </Route>
+          <Route exact path="/">
+            <Book />
+          </Route>
+        </Suspense>
+      </main>
+    </>
   );
 }
 

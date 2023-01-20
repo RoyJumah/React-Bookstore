@@ -1,0 +1,14 @@
+.bookList {
+  list-style: none;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.remove__button {
+  padding: 0.4rem 0.6rem;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  margin-left: 0.6rem;
+  border-radius: 5px;
+}
