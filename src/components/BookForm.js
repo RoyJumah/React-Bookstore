@@ -9,6 +9,8 @@ const BookForm = ({ onAddBook }) => {
   const [authorIsValid, setAuthorIsValid] = useState(false);
   const [titleTouched, setTitleTouched] = useState(false);
   const [authorTouched, setAuthorTouched] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -19,6 +21,8 @@ const BookForm = ({ onAddBook }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
     setTitleTouched(true);
     setAuthorTouched(true);
     if (enteredTitle.trim() === '') {
@@ -36,6 +40,7 @@ const BookForm = ({ onAddBook }) => {
       setEnteredAuthor('');
       setEnteredTitle('');
     }
+    setSubmitting(false);
   };
 
   return (
@@ -85,7 +90,9 @@ const BookForm = ({ onAddBook }) => {
     </>
   );
 };
+
 BookForm.propTypes = {
   onAddBook: PropTypes.func.isRequired,
 };
+
 export default BookForm;
