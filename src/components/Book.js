@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Books from '../redux/books/Books';
 import BookForm from './BookForm';
 
@@ -8,12 +9,12 @@ class Book extends Component {
     this.state = {
       books: [
         {
-          id: 1,
+          id: uuidv4(),
           title: 'When The Sun Goes Down',
           author: 'Gwynne Forster',
         },
         {
-          id: 2,
+          id: uuidv4(),
           title: 'To Kill A Mocking Bird',
           author: 'Harper Lee',
         },
@@ -23,7 +24,7 @@ class Book extends Component {
 
   addBook = (book) => {
     this.setState((prevState) => ({
-      books: [...prevState.books, book],
+      books: [...prevState.books, { ...book, id: uuidv4() }],
     }));
   };
 
@@ -39,7 +40,6 @@ class Book extends Component {
       <div>
         <Books books={books} deleteBook={this.deleteBook} />
         <BookForm onAddBook={this.addBook} />
-
       </div>
     );
   }

@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 const BookForm = ({ onAddBook }) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
-  const [enteredTitleIsValid, setEnteredTitleIsValid] = useState(true);
-  const [enteredAuthorIsValid, setEnteredAuthorIsValid] = useState(true);
+  const [enteredTitleIsValid, setEnteredTitleIsValid] = useState(false);
+  const [enteredAuthorIsValid, setEnteredAuthorIsValid] = useState(false);
+  const [enteredTitleTouched, setEnteredTitleTouched] = useState(false);
+  const [enteredAuthorTouched, setEnteredAuthorTouched] = useState(false);
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -17,6 +19,8 @@ const BookForm = ({ onAddBook }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    setEnteredTitleTouched(true);
+    setEnteredAuthorTouched(true);
     if (enteredTitle.trim() === '' || enteredAuthor.trim() === '') {
       setEnteredTitleIsValid(false);
       setEnteredAuthorIsValid(false);
@@ -29,9 +33,13 @@ const BookForm = ({ onAddBook }) => {
     setEnteredAuthor('');
     setEnteredTitle('');
   };
-  const nameInputClasses = enteredAuthorIsValid && enteredAuthorIsValid
-    ? 'new-expense__control'
-    : ' invalid';
+
+  const nameInputIsInvalid = !enteredAuthorIsValid && enteredAuthorTouched;
+  const authorInputIsInvalid = !enteredTitleIsValid && enteredTitleTouched;
+
+  const nameInputClasses = nameInputIsInvalid || authorInputIsInvalid
+    ? 'new-expense__control invalid'
+    : 'new-expense__control';
 
   return (
     <>
@@ -45,7 +53,7 @@ const BookForm = ({ onAddBook }) => {
               value={enteredTitle}
               onChange={titleChangeHandler}
             />
-            {!enteredTitleIsValid && (
+            {nameInputIsInvalid && (
               <p className="error-text">Title must not be empty</p>
             )}
           </div>
@@ -56,7 +64,7 @@ const BookForm = ({ onAddBook }) => {
               value={enteredAuthor}
               onChange={authorChangeHandler}
             />
-            {!enteredAuthorIsValid && (
+            {authorInputIsInvalid && (
               <p className="error-text">Author must not be empty .</p>
             )}
           </div>
