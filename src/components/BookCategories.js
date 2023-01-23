@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/BookCategories.css';
+import '../css/BookCategories.css';
 
 const BookCategories = () => (
   <div>

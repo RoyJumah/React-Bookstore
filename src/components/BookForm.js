@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const BookForm = ({ onAddBook }) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
-  const [enteredTitleIsValid, setEnteredTitleIsValid] = useState(false);
-  const [enteredAuthorIsValid, setEnteredAuthorIsValid] = useState(false);
-  const [enteredTitleTouched, setEnteredTitleTouched] = useState(false);
-  const [enteredAuthorTouched, setEnteredAuthorTouched] = useState(false);
+  const [titleIsValid, setTitleIsValid] = useState(false);
+  const [authorIsValid, setAuthorIsValid] = useState(false);
+  const [titleTouched, setTitleTouched] = useState(false);
+  const [authorTouched, setAuthorTouched] = useState(false);
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -19,52 +19,61 @@ const BookForm = ({ onAddBook }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setEnteredTitleTouched(true);
-    setEnteredAuthorTouched(true);
-    if (enteredTitle.trim() === '' || enteredAuthor.trim() === '') {
-      setEnteredTitleIsValid(false);
-      setEnteredAuthorIsValid(false);
-      return;
+    setTitleTouched(true);
+    setAuthorTouched(true);
+    if (enteredTitle.trim() === '') {
+      setTitleIsValid(false);
+    } else {
+      setTitleIsValid(true);
     }
-
-    setEnteredTitleIsValid(true);
-    setEnteredAuthorIsValid(true);
-    onAddBook({ title: enteredTitle, author: enteredAuthor });
-    setEnteredAuthor('');
-    setEnteredTitle('');
+    if (enteredAuthor.trim() === '') {
+      setAuthorIsValid(false);
+    } else {
+      setAuthorIsValid(true);
+    }
+    if (titleIsValid && authorIsValid) {
+      onAddBook({ title: enteredTitle, author: enteredAuthor });
+      setEnteredAuthor('');
+      setEnteredTitle('');
+    }
   };
-
-  const nameInputIsInvalid = !enteredAuthorIsValid && enteredAuthorTouched;
-  const authorInputIsInvalid = !enteredTitleIsValid && enteredTitleTouched;
-
-  const nameInputClasses = nameInputIsInvalid || authorInputIsInvalid
-    ? 'new-expense__control invalid'
-    : 'new-expense__control';
 
   return (
     <>
       <form onSubmit={submitHandler}>
         <h2>ADD NEW BOOK</h2>
         <div className="new-expense__controls">
-          <div className={nameInputClasses}>
+          <div
+            className={
+              titleIsValid || !titleTouched
+                ? 'new-expense__control'
+                : 'new-expense__control invalid'
+            }
+          >
             <input
               type="text"
               placeholder="Book Title"
               value={enteredTitle}
               onChange={titleChangeHandler}
             />
-            {nameInputIsInvalid && (
+            {!titleIsValid && titleTouched && (
               <p className="error-text">Title must not be empty</p>
             )}
           </div>
-          <div className={nameInputClasses}>
+          <div
+            className={
+              authorIsValid || !authorTouched
+                ? 'new-expense__control'
+                : 'new-expense__control invalid'
+            }
+          >
             <input
               type="text"
               placeholder="Author"
               value={enteredAuthor}
               onChange={authorChangeHandler}
             />
-            {authorInputIsInvalid && (
+            {!authorIsValid && authorTouched && (
               <p className="error-text">Author must not be empty .</p>
             )}
           </div>

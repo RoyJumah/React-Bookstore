@@ -4,7 +4,7 @@ import LoadingSpinner from './components/UI/LoadingSpinner';
 
 import MainHeader from './components/MainHeader';
 
-const BookCategories = React.lazy(() => import('./redux/categories/BookCategories'));
+const BookCategories = React.lazy(() => import('./components/BookCategories'));
 const Book = React.lazy(() => import('./components/Book'));
 
 function App() {

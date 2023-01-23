@@ -1,39 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../../css/Books.css';
-
-const Books = (props) => {
-  const { books, deleteBook } = props;
-  return (
-    <ul className="bookList">
-      {books.map((book) => (
-        <li key={book.id}>
-          {book.title}
-          {' '}
-          -
-          {book.author}
-          <button
-            className="remove__button"
-            type="button"
-            onClick={() => deleteBook(book.id)}
-          >
-            Remove
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
+const initialState = {
+  books: [],
 };
 
-Books.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  deleteBook: PropTypes.func.isRequired,
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  book,
+});
+
+export const removeBook = (book) => ({
+  type: REMOVE_BOOK,
+  book,
+});
+
+const bookReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return { ...state, books: [...state.books, action.book] };
+    case REMOVE_BOOK:
+      return {
+        ...state,
+        books: state.books.filter((book) => book !== action.book),
+      };
+    default:
+      return state;
+  }
 };
 
-export default Books;
+export default bookReducer;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Books from '../redux/books/Books';
+import Books from './Books';
 import BookForm from './BookForm';
 
 class Book extends Component {
