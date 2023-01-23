@@ -1,7 +1,9 @@
 .bookList {
   list-style: none;
   align-items: center;
-  gap: 2.4rem;
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .remove__button {
@@ -10,5 +12,4 @@
   border: none;
   color: #fff;
   margin-left: 0.6rem;
-  border-radius: 5px;
 }
