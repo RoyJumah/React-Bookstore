@@ -17,7 +17,7 @@ export const removeBook = (bookId) => ({
 // reducer.js
 const initialState = [];
 
-export default createReducer(initialState, {
+const booksReducer = createReducer(initialState, {
   [ADD_BOOK]: (state, action) => {
     state.push(action.payload);
   },
@@ -25,3 +25,5 @@ export default createReducer(initialState, {
     state.filter((book) => book.id !== action.payload);
   },
 });
+
+export default booksReducer;
