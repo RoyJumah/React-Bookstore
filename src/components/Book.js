@@ -23,9 +23,7 @@ class Book extends Component {
   }
 
   addBook = (book) => {
-    this.setState((prevState) => ({
-      books: [...prevState.books, { ...book, id: uuidv4() }],
-    }));
+    this.setState((state) => ({ ...state, books: [...state.books, { ...book, id: uuidv4() }] }));
   };
 
   deleteBook = (id) => {

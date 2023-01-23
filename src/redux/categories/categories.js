@@ -1,8 +1,8 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer } from '@reduxjs/toolkit';
 
 // actions.js
-export const CHECK_STATUS = "categories/CHECK_STATUS";
-export const SET_CATEGORIES = "categories/SET_CATEGORIES";
+export const CHECK_STATUS = 'categories/CHECK_STATUS';
+export const SET_CATEGORIES = 'categories/SET_CATEGORIES';
 
 export const checkStatus = () => ({
   type: CHECK_STATUS,
@@ -17,10 +17,8 @@ export const setCategories = (categories) => ({
 const initialState = [];
 
 export default createReducer(initialState, {
-  [CHECK_STATUS]: (state) => {
-    return "Under construction";
-  },
+  [CHECK_STATUS]: () => 'Under construction',
   [SET_CATEGORIES]: (state, action) => {
-    return action.payload;
+    state.push(...action.payload);
   },
 });

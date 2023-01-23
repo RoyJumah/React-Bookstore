@@ -32,7 +32,7 @@
 
 .header a:hover,
 .header a:active {
-  color: #666666;
+  color: #666;
   padding-bottom: 0.25rem;
-  border-bottom: 4px solid #666666;
+  border-bottom: 4px solid #666;
 }
