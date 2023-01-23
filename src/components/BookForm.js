@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import './BookForm.css';
+import '../css/BookForm.css';
+import PropTypes from 'prop-types';
 
-const BookForm = () => {
-  const [enteredTitle, setEnteredTitle] = useState({
-    bookTitle: '',
-  });
-
-  const [enteredAuthor, setEnteredAuthor] = useState({
-    bookAuthor: '',
-  });
+const BookForm = ({ onAddBook }) => {
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAuthor, setEnteredAuthor] = useState('');
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle({ bookTitle: event.target.value });
+    setEnteredTitle(event.target.value);
   };
 
   const authorChangeHandler = (event) => {
-    setEnteredAuthor({ bookAuthor: event.target.value });
+    setEnteredAuthor(event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
+    onAddBook({ title: enteredTitle, author: enteredAuthor });
+    setEnteredAuthor('');
+    setEnteredTitle('');
   };
 
   return (
@@ -31,7 +30,7 @@ const BookForm = () => {
             <input
               type="text"
               placeholder="Book Title"
-              value={enteredTitle.bookTitle}
+              value={enteredTitle}
               onChange={titleChangeHandler}
             />
           </div>
@@ -39,7 +38,7 @@ const BookForm = () => {
             <input
               type="text"
               placeholder="Author"
-              value={enteredAuthor.bookAuthor}
+              value={enteredAuthor}
               onChange={authorChangeHandler}
             />
           </div>
@@ -51,5 +50,7 @@ const BookForm = () => {
     </>
   );
 };
-
+BookForm.propTypes = {
+  onAddBook: PropTypes.func.isRequired,
+};
 export default BookForm;

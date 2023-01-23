@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Books from './Books';
+import Books from '../redux/books/Books';
 import BookForm from './BookForm';
 
 class Book extends Component {
@@ -21,12 +21,25 @@ class Book extends Component {
     };
   }
 
+  addBook = (book) => {
+    this.setState((prevState) => ({
+      books: [...prevState.books, book],
+    }));
+  };
+
+  deleteBook = (id) => {
+    this.setState((prevState) => ({
+      books: prevState.books.filter((book) => book.id !== id),
+    }));
+  };
+
   render() {
     const { books } = this.state;
     return (
       <div>
-        <Books books={books} />
-        <BookForm />
+        <Books books={books} deleteBook={this.deleteBook} />
+        <BookForm onAddBook={this.addBook} />
+
       </div>
     );
   }
