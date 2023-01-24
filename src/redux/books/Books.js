@@ -1,8 +1,8 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer } from "@reduxjs/toolkit";
 
 // actions.js
-export const ADD_BOOK = 'books/ADD_BOOK';
-export const REMOVE_BOOK = 'books/REMOVE_BOOK';
+export const ADD_BOOK = "React-Bookstore/books/ADD_BOOK ";
+export const REMOVE_BOOK = "React-Bookstore/books/REMOVE_BOOK";
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
