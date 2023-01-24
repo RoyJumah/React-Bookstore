@@ -1,4 +1,3 @@
-import './App.css';
 import React, { Suspense } from 'react';
 import { Route } from 'react-router-dom';
 import LoadingSpinner from './components/UI/LoadingSpinner';

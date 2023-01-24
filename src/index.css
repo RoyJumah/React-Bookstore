@@ -5,7 +5,7 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #e7f8f8;
+  background-color: #fff;
 }
 
 .centered {
@@ -20,4 +20,20 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: white;
+}
+
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+  width: 20rem;
+  padding: 0.5rem;
+}
+
+.invalid input:focus {
+  border-color: #f80;
+  background-color: #fbe8d2;
+}
+
+.error-text {
+  color: #b40e0e;
 }

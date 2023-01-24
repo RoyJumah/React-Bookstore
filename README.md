@@ -19,6 +19,7 @@
   - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -115,6 +116,20 @@ You will see the build errors and lint warnings in the console.
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **Editing the book entered by the user**
+- [ ] **Adding comments about the book**
+- [ ] **Storing and retrieving the books from an API**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
