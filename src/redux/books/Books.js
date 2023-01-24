@@ -26,6 +26,4 @@ const booksReducer = createReducer(initialState, {
   },
 });
 
-export {addBook, removeBook}
-
 export default booksReducer;
