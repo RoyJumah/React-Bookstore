@@ -4,18 +4,7 @@ import Books from './Books';
 import BookForm from './BookForm';
 
 const Book = () => {
-  const [books, setBooks] = useState([
-    {
-      id: uuidv4(),
-      title: 'When The Sun Goes Down',
-      author: 'Gwynne Forster',
-    },
-    {
-      id: uuidv4(),
-      title: 'To Kill A Mocking Bird',
-      author: 'Harper Lee',
-    },
-  ]);
+  const [books, setBooks] = useState([]);
 
   const addBook = (book) => {
     setBooks([...books, { ...book, id: uuidv4() }]);
