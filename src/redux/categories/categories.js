@@ -1,8 +1,8 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 // actions.js
-export const CHECK_STATUS = 'bookStore/categories/CHECK_STATUS';
-export const SET_CATEGORIES = 'bookStore/categories/SET_CATEGORIES';
+const CHECK_STATUS = 'React-Bookstore/categories/CHECK_STATUS';
+const SET_CATEGORIES = 'React-Bookstore/categories/SET_CATEGORIES';
 
 export const checkStatus = () => ({
   type: CHECK_STATUS,

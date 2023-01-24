@@ -1,8 +1,8 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 // actions.js
-export const ADD_BOOK = 'bookStore/Book/ADD_BOOK ';
-export const REMOVE_BOOK = 'bookStore/Book/REMOVE_BOOK';
+const ADD_BOOK = 'React-Bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'React-Bookstore/books/REMOVE_BOOK';
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
@@ -25,5 +25,7 @@ const booksReducer = createReducer(initialState, {
     state.filter((book) => book.id !== action.payload);
   },
 });
+
+export {addBook, removeBook}
 
 export default booksReducer;
