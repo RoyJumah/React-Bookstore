@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { produce } from 'immer';
 
 const initialState = { categories: [], status: '' };
 
@@ -15,8 +14,9 @@ const categoriesSlice = createSlice({
       ...state,
       status: 'Under construction',
     }),
-    resetStatus: (state) => produce(state, (draftState) => {
-      draftState.status = '';
+    resetStatus: (state) => ({
+      ...state,
+      status: '',
     }),
   },
 });

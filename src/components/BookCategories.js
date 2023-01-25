@@ -11,9 +11,12 @@ const BookCategories = () => {
     dispatch(checkStatus());
   };
 
-  useEffect(() => () => {
-    dispatch(resetStatus());
-  }, []);
+  useEffect(
+    () => () => {
+      dispatch(resetStatus());
+    },
+    [dispatch],
+  );
 
   return (
     <div>
