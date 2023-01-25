@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../css/BookForm.css';
 import PropTypes from 'prop-types';
+import '../css/BookForm.css';
 
-const BookForm = ({ onAddBook, setTitle, setAuthor }) => {
+const BookForm = ({ onAddBook }) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
@@ -15,9 +15,9 @@ const BookForm = ({ onAddBook, setTitle, setAuthor }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (enteredTitle.trim() !== '' && enteredAuthor.trim() !== '') {
-      onAddBook();
-      setTitle(enteredTitle);
-      setAuthor(enteredAuthor);
+      onAddBook(enteredTitle, enteredAuthor);
+      setEnteredTitle('');
+      setEnteredAuthor('');
     }
   };
 
@@ -53,8 +53,6 @@ const BookForm = ({ onAddBook, setTitle, setAuthor }) => {
 
 BookForm.propTypes = {
   onAddBook: PropTypes.func.isRequired,
-  setTitle: PropTypes.func.isRequired,
-  setAuthor: PropTypes.func.isRequired,
 };
 
 export default BookForm;
