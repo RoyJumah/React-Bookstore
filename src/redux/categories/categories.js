@@ -1,24 +1,26 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-// actions.js
-const CHECK_STATUS = 'React-Bookstore/categories/CHECK_STATUS';
-const SET_CATEGORIES = 'React-Bookstore/categories/SET_CATEGORIES';
+const initialState = { categories: [], status: '' };
 
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
-});
-
-export const setCategories = (categories) => ({
-  type: SET_CATEGORIES,
-  payload: categories,
-});
-
-// reducer.js
-const initialState = [];
-
-export default createReducer(initialState, {
-  [CHECK_STATUS]: () => 'Under construction',
-  [SET_CATEGORIES]: (state, action) => {
-    state.push(...action.payload);
+const categoriesSlice = createSlice({
+  name: 'categories',
+  initialState,
+  reducers: {
+    setCategories: (state, action) => ({
+      ...state,
+      categories: [...state.categories, ...action.payload],
+    }),
+    checkStatus: (state) => ({
+      ...state,
+      status: 'Under construction',
+    }),
+    resetStatus: (state) => ({
+      ...state,
+      status: '',
+    }),
   },
 });
+
+export const { setCategories, checkStatus, resetStatus } = categoriesSlice.actions;
+
+export default categoriesSlice.reducer;
