@@ -1,39 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import '../css/Books.css';
+import { useSelector } from 'react-redux';
+import Book from './UI/Book';
 
-const Books = (props) => {
-  const { books, deleteBook } = props;
+const Books = () => {
+  const books = useSelector((state) => state.books);
   return (
-    <ul className="bookList">
+    <div>
       {books.map((book) => (
-        <li key={book.id}>
-          {book.title}
-          {' '}
-          -
-          {book.author}
-          <button
-            className="remove__button"
-            type="button"
-            onClick={() => deleteBook(book.id)}
-          >
-            Remove
-          </button>
-        </li>
+        <Book key={book.id} book={book} />
       ))}
-    </ul>
+    </div>
   );
-};
-
-Books.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  deleteBook: PropTypes.func.isRequired,
 };
 
 export default Books;

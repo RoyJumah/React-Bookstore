@@ -1,156 +1,89 @@
-<a name="readme-top"></a>
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-  <h3><b>Microverse README Template</b></h3>
+# Bookstore
 
-</div>
+> The bookstore is a web application that allows users to:
 
-<!-- TABLE OF CONTENTS -->
+- Display a list of saved books.
+- Add a new book.
+- Remove a selected book.
+- Preview the chapter and progress saved while reading through a specific book. 
 
-# 📗 Table of Contents
+## Project snapshot
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+# [![sidney kaguli header](https://github.com/XsidX/bookstore/blob/dev/bookstore-desk%26mobile.png)](https://bookstore-sid.netlify.app/home)
 
-<!-- PROJECT DESCRIPTION -->
+## Built With
 
-# 📖 [Bookstore] <a name="about-project"></a>
+- React(Create React App)
+- Sass
 
-> This is an application that allows users to easily keep track of their reading list by adding and removing books. It’s a great way to discover new books and stay organized, making it perfect for book lovers and avid readers
+## Live Demo Link
 
-## 🛠 Built With <a name="built-with"></a>
+Check out the live demo [here](https://bookstore-sid.netlify.app/home)
 
-### Tech Stack <a name="tech-stack"></a>
+## Getting Started
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-     <li><a href="https://sass-lang.com/guide">Sass</li>
-      <li><a href="https://www.w3schools.com/html/">HTML</li>
-       <li><a href="https://www.w3schools.com/css/">CSS</li>
-  </ul>
-</details>
+## Prerequisites
 
-<!-- Features -->
+- React
+- Sass
 
-### Key Features <a name="key-features"></a>
+## Install
 
-- **[Adding a book to a list .]**
-- **[Removing a book from a list]**
+- run `git clone git@github.com:XsidX/bookstore.git` on your terminal
+- cd into the directory
+- run `npm install`
 
+## Available Scripts
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+In the project directory, you can run:
 
-<!-- LIVE DEMO -->
+### `npm start`
 
-## 🚀 Live Demo <a name="live-demo"></a> (**Not yet Available**)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- [Live Demo Link]()
+### `npm test`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<!-- GETTING STARTED -->
+### `npm run build`
 
-## 💻 Getting Started <a name="getting-started"></a> 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-> To get a local copy up and running, follow this steps;
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Prerequisites
-- ReactJS
-- HTML
-- CSS
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-In order to run this project you need:
+## Authors
 
-To have installed Nodejs in your Code editor. In case you don't have it, go to this [site](https://nodejs.org/en/) and download the setup based on your PC
+👤 **Sidney**
 
-## Setup
-In a desired folder or directory in the CLI, run the command:
+- GitHub: [XsidX](https://github.com/XsidX)
+- Twitter: [@\_sid_o](https://twitter.com/_sid_o_)
+- LinkedIn: [Sidney Kaguli](https://www.linkedin.com/in/sidney-kaguli-0116801a6/)
 
-```JavaScipt
-cd clone https://github.com/RoyJumah/React-Bookstore.git
-```
-
-### Install
-
-Navigate into the cloned folder or repository by running the command:
-```JavaScript
- cd <folder/name of the repository>
- ```
-Then run ```npm install``` to install all required dependencies (this will create a /node_modules folder).
-
-### Usage
-
-To run the project, execute the following command:
-
-Inside the newly created project, you can run some built-in commands:
-
-```npm start``` or ```yarn start```
-Runs the app in development mode.
-Open http://localhost:3000/ to view it in the browser.
-
-The page will automatically reload if you make changes to the code.
-You will see the build errors and lint warnings in the console.
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-👤 **Roy Jumah**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **Editing the book entered by the user**
-- [ ] **Adding comments about the book**
-- [ ] **Storing and retrieving the books from an API**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support <a name="support"></a>
+## Show your support
 
 Give a ⭐️ if you like this project!
 
-<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgments
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+-Microverse Bookstore milestone 🎉
 
-- I would like to thank ``` Microverse``` for providing me the materials that enabled me to finish this exercise
+## 📝 License
 
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./license) licensed
+This project is [MIT](https://github.com/XsidX/bookstore/blob/configure-redux/MIT.md) licensed.
