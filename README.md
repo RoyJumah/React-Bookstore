@@ -64,11 +64,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Authors
 
-👤 **Sidney**
-
-- GitHub: [XsidX](https://github.com/XsidX)
-- Twitter: [@\_sid_o](https://twitter.com/_sid_o_)
-- LinkedIn: [Sidney Kaguli](https://www.linkedin.com/in/sidney-kaguli-0116801a6/)
 
 ## 🤝 Contributing
 
