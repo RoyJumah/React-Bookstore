@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: #fff;
+  padding: 0 10%;
+  box-shadow: 12px 8px 2px 1px rgba(44, 44, 46, 0.2);
+}
+
+.header nav {
+  height: 100%;
+}
+
+.header ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header li {
+  margin: 0 1rem;
+  width: 5rem;
+}
+
+.header a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header a:hover,
+.header a:active {
+  color: #666;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #666;
+}
