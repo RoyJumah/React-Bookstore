@@ -1,7 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-
 <a name="readme-top"></a>
+
+  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -20,6 +19,7 @@
   - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math-Magicians] <a name="about-project"></a>
+# 📖 [Bookstore] <a name="about-project"></a>
 
-> This is a Single Page Application that allows users to make simple calculations and read and a random math-related quote
+> This is an application that allows users to easily keep track of their reading list by adding and removing books. It’s a great way to discover new books and stay organized, making it perfect for book lovers and avid readers
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,19 +49,19 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Make simple calculations.]**
-- **[Read a random math-related quote.]**
+- **[Adding a book to a list .]**
+- **[Removing a book from a list]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a> (**Not yet Available**)
 
 
-- [Deployment on Netlify](https://monumental-brigadeiros-794e69.netlify.app/)
-- [Deployment on Render](https://royjumah-mathmagicians.onrender.com)
+- [Live Demo Link]()
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -72,7 +72,8 @@
 
 ### Prerequisites
 - ReactJS
-- Sass
+- HTML
+- CSS
 
 In order to run this project you need:
 
@@ -82,7 +83,7 @@ To have installed Nodejs in your Code editor. In case you don't have it, go to t
 In a desired folder or directory in the CLI, run the command:
 
 ```JavaScipt
-cd clone https://github.com/RoyJumah/React-Redux-Boilerplate.git
+cd clone https://github.com/RoyJumah/React-Bookstore.git
 ```
 
 ### Install
@@ -115,6 +116,20 @@ You will see the build errors and lint warnings in the console.
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **Editing the book entered by the user**
+- [ ] **Adding comments about the book**
+- [ ] **Storing and retrieving the books from an API**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
