@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const BASE_URL =
   "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi";
-const APP_ID = "UwsSr34kkvnAVWQyG0sQ";
+const APP_ID = "HR7xpCM0ZSs2NX4oysHp";
 
 const ADD = "bookstore/books/ADD";
 const REMOVE = "bookstore/books/REMOVE";

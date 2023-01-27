@@ -1,9 +1,9 @@
-import React from "react";
-import propTypes from "prop-types";
+import React from 'react';
+import propTypes from 'prop-types';
 
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 // import { bookActions } from '../../redux/books/books-slice';
-import { deleteBook } from "../../redux/books/book";
+import { deleteBook } from '../../redux/books/book';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();

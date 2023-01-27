@@ -1,8 +1,8 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Categories from "./pages/Categories";
-import Layout from "./components/layout/layout";
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Categories from './pages/Categories';
+import Layout from './components/layout/layout';
 
 const App = () => (
   <Layout>

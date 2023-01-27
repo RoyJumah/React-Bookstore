@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
-import { postBook } from "../../redux/books/book";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook } from '../../redux/books/book';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const titleChangeHandler = (e) => {
     setTitle(e.target.value);
@@ -18,16 +18,20 @@ const AddBook = () => {
 
   const addBookHandler = (e) => {
     e.preventDefault();
+
+    // check for empty values
+    if (title.trim().length === 0 || author.trim().length === 0) return;
+
     const book = {
       item_id: uuidv4(),
       title,
       author,
-      category: "Fiction",
+      category: 'Fiction',
     };
 
     dispatch(postBook(book));
-    setTitle("");
-    setAuthor("");
+    setTitle('');
+    setAuthor('');
   };
 
   return (
